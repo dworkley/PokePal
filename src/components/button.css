@@ -1,0 +1,11 @@
+.button-default {
+  align-self: center;
+  background-color: #f7d346;
+  color: #3f3025;
+  height: 50px;
+  width: 250px;
+  border: 8px;
+  border-color: #3f3025;
+  border-radius: 20px;
+  margin: 10px;
+}
