@@ -1,6 +1,7 @@
 import './App.css';
 import { SplashScreen } from './pages/splashScreen/splashScreen.tsx';
 import { HomeScreen } from './pages/homeScreen/homescreen.tsx';
+import { PokedexScreen } from './pages/pokedexScreen/pokedexScreen.tsx';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: "home",
     elment: <HomeScreen/>
+  },
+  {
+    path: "pokedex",
+    element: <PokedexScreen/>
   }
 ]); 
 

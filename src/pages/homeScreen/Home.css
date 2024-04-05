@@ -5,14 +5,12 @@
     height: 90hv;
     width: 100%;
     margin-top: 10vh;
-    /* border: 1px solid orange; */
 
     .titleArea{
         height: 20%;
         width: 100%;
         font-size: 36px;
         text-align: center;
-        /* border: solid 1px green; */
     }
 
     .buttonsContainer{
@@ -23,7 +21,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /* border: 1px solid blue; */
 
 
         .menuButton{
@@ -33,6 +30,11 @@
             width: 70%;
             height: 15%;
             background-color: var(--black);
+
+            .navLink{
+                text-decoration: none;
+                color: inherit;
+            }
         }
 
         .dexButton{
