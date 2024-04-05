@@ -1,24 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import { SplashScreen } from './pages/splashScreen/splashScreen.tsx';
+import { HomeScreen } from './pages/homeScreen/homescreen.tsx';
+import { createBrowserRouter, RouterProvider} from 'react-router-dom';
+import { useEffect, useState } from 'react';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeScreen/>,
+  },
+  {
+    path: "home",
+    elment: <HomeScreen/>
+  }
+]); 
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  const [showSplashScreen, setShowSplashScreen] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() =>{
+      setShowSplashScreen(false);
+    }, 4000)
+  })
+
+  return showSplashScreen? (
+    
+    <SplashScreen/>
+
+  ) : (
+    
+    <div style={{justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%'}}>
+      <RouterProvider router={router}/>
     </div>
+  
   );
 }
 
