@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomeScreen/>,
+    element: <HomeScreen />,
   },
   {
     path: "home",
@@ -21,25 +21,27 @@ const router = createBrowserRouter([
 ]); 
 
 function App() {
-
   const [showSplashScreen, setShowSplashScreen] = useState(true);
 
   useEffect(() => {
-    setTimeout(() =>{
+    setTimeout(() => {
       setShowSplashScreen(false);
-    }, 4000)
-  })
+    }, 4000);
+  });
 
-  return showSplashScreen? (
-    
-    <SplashScreen/>
-
+  return showSplashScreen ? (
+    <SplashScreen />
   ) : (
-    
-    <div style={{justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%'}}>
-      <RouterProvider router={router}/>
+    <div
+      style={{
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100%",
+        width: "100%",
+      }}
+    >
+      <RouterProvider router={router} />
     </div>
-  
   );
 }
 
