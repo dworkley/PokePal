@@ -6,6 +6,7 @@
     "@capacitor/android": "^5.7.4",
     "@capacitor/cli": "^5.7.4",
     "@capacitor/core": "^5.7.4",
+    "@capacitor/dialog": "^5.0.7",
     "@capacitor/ios": "^5.7.4",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

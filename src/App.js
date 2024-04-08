@@ -1,9 +1,10 @@
-import './App.css';
-import { SplashScreen } from './pages/splashScreen/splashScreen.tsx';
-import { HomeScreen } from './pages/homeScreen/homescreen.tsx';
-import { PokedexScreen } from './pages/pokedexScreen/pokedexScreen.tsx';
-import { createBrowserRouter, RouterProvider} from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import "./App.css";
+import { SplashScreen } from "./pages/splashScreen/splashScreen.tsx";
+import { HomeScreen } from "./pages/homeScreen/homescreen.tsx";
+import { PokedexScreen } from "./pages/pokedexScreen/pokedexScreen.tsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useEffect, useState } from "react";
+import RandomPokemon from "./pages/guessScreen/RandomPokemon.tsx";
 
 const router = createBrowserRouter([
   {
@@ -12,13 +13,17 @@ const router = createBrowserRouter([
   },
   {
     path: "home",
-    elment: <HomeScreen/>
+    elment: <HomeScreen />,
   },
   {
     path: "pokedex",
-    element: <PokedexScreen/>
-  }
-]); 
+    element: <PokedexScreen />,
+  },
+  {
+    path: "guessgame",
+    element: <RandomPokemon />,
+  },
+]);
 
 function App() {
   const [showSplashScreen, setShowSplashScreen] = useState(true);

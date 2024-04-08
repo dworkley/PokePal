@@ -5,6 +5,8 @@ const config: CapacitorConfig = {
   appName: "PokePal",
   webDir: "build",
   server: {
+    url: "http://192.168.1.234:3000",
+    cleartext: true,
     androidScheme: "https",
   },
 };
